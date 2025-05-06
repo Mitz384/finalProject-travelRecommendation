@@ -217,10 +217,7 @@ function clear(){
     document.getElementById("result").innerHTML = ""; 
 
     const section = document.querySelector('section');
-    if (section.classList.contains("min-h-screen")){
-        section.classList.remove("min-h-screen");
-        section.classList.add("h-[calc(100vh-80px)]");
-    }
+    section.style.removeProperty("height");
 }
 document.getElementById("clearBtn").addEventListener("click", clear);
 
