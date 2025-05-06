@@ -148,23 +148,8 @@ function search(){
                 return;
             }
 
-            console.log(result);
-            const section = document.querySelector('section');
-            if (result.length === 1){
-                if (section.classList.contains("min-h-screen")){
-                    section.classList.remove("min-h-screen");
-                    section.classList.add("h-[calc(100vh-80px)]");
-                }
-            } else {
-                if (section.classList.contains("h-[calc(100vh-80px)]")){
-                    section.classList.remove("h-[calc(100vh-80px)]");
-                    section.classList.add("min-h-screen");
-                }
-            }
-
             const resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = "";
-            resultDiv.classList.remove("hidden");
+            resultDiv.innerHTML = "";            
             result.forEach(record => {
                 const cardDiv = document.createElement("div");
                 cardDiv.classList.add("flex", "flex-col", "gap-4", "text-black", "bg-white", "rounded-xl", "pb-6");
@@ -196,9 +181,29 @@ function search(){
                 cardDiv.appendChild(button);
                 resultDiv.appendChild(cardDiv);
             });
+            return result;
+        })
+        .then(result => {
+            const section = document.querySelector('section');
+            const resultDiv = document.getElementById("result");
+
+            if (result.length === 1){
+                section.style.removeProperty("height");
+            }
+            else{
+                // Use requestAnimationFrame to ensure DOM updates are complete
+                requestAnimationFrame(() => {
+                    setTimeout(() => {
+                        const res_height = resultDiv.getBoundingClientRect().height;
+        
+                        // Optionally, adjust the section height dynamically
+                        section.style.setProperty("height", `${0.25*10*16*2 + res_height}px`); // Add padding if needed
+                    }, 100); 
+                });
+            }
         })
         .catch(error => {
-           console.error("An error occurred: ", error);
+            console.error("An error occurred: ", error);
         })
 }
 
@@ -218,3 +223,12 @@ function clear(){
     }
 }
 document.getElementById("clearBtn").addEventListener("click", clear);
+
+document.getElementById("submitBtn").addEventListener("click", () => {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (name && email && message) alert("Thanks for contacting us!");
+    else alert("Please fill in all information!");
+})

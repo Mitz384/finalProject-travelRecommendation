@@ -29,10 +29,11 @@
     </nav>
 
     <!-- Content -->
-    <section class="relative inset-0 h-[calc(100vh-80px)] z-10 bg-no-repeat bg-center bg-cover" style="background-image: url('https://www.vietnamimmigration.com/wp-content/uploads/2012/11/view-over-hanoi-vietnam.jpg')">
+    <section class="relative inset-0 min-h-[calc(100vh-80px)] z-10 bg-no-repeat bg-center bg-cover" style="background-image: url('https://www.vietnamimmigration.com/wp-content/uploads/2012/11/view-over-hanoi-vietnam.jpg')">
         <!-- Background -->
         <div class="absolute inset-0 bg-black/35 backdrop-blur-xs"></div>
-        <div class="relative flex justify-between p-10 h-full">
+
+        <div class="relative flex p-10 h-full">
             <!-- Home -->
             <div class="flex items-center gap-20 h-[calc(100vh-80px-5rem)]" id="home_content">
                 <div class="flex h-full flex-col items-center justify-between">
@@ -71,9 +72,9 @@
                     </div>
                 </div>
                 <div id="introduction" class="flex flex-col gap-20">
-                    <div class="flex flex-col gap-5">
-                        <h1 class="font-extrabold text-7xl text-white w-[35%] text-wrap">EXPLORE DREAM DESTINATION</h1>
-                        <p class="text-white text-lg w-[40vh] text-wrap">It encourages exploration of unfamiliar territories, embarcing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+                    <div class="flex flex-col gap-5 w-[20vw]">
+                        <h1 class="font-extrabold text-7xl text-white text-wrap">EXPLORE DREAM DESTINATION</h1>
+                        <p class="text-white text-lg text-wrap">It encourages exploration of unfamiliar territories, embarcing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
                     </div>
                     <button class="text-white text-lg bg-sky-300 px-7 py-2 rounded-lg font-semibold w-fit cursor-pointer">BOOK NOW</button>
                 </div>
@@ -235,24 +236,25 @@
                     <div class="flex flex-col gap-6 w-[45vw]">
                         <div class="flex flex-col gap-3 w-full">
                             <label for="name" class="text-white text-lg">Name</label>
-                            <input class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50 text-white" id="name" name="name" type="text" placeholder="Enter your name" required>
+                            <input class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50 text-white" id="name" name="name" type="text" placeholder="Enter your name (Required)" required>
                         </div>
                         <div class="flex flex-col gap-3 w-full">
                             <label for="email" class="text-white text-lg">Email</label>
-                            <input class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50 text-white" id="email" name="email" type="text" placeholder="Enter your email" required>
+                            <input class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50 text-white" id="email" name="email" type="text" placeholder="Enter your email (Required)" required>
                         </div>
                         <div class="flex flex-col gap-3 w-full">
                             <label for="message" class="text-white text-lg">Message</label>
-                            <textarea class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50 text-white" id="message" name="message" type="text" rows="10" placeholder="Enter your message" required></textarea>
+                            <textarea class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50 text-white" id="message" name="message" type="text" rows="10" placeholder="Enter your message (Required)" required></textarea>
                         </div>
-                        <button class="bg-sky-300 py-2 text-white text-xl font-semibold rounded-lg" type="submit">Submit</button>
+                        <button class="bg-sky-300 py-2 text-white text-xl font-semibold rounded-lg" type="submit" id="submitBtn">Submit</button>
                     </div>
                 </div>
             </div>
-
-            <!-- Search result -->
-            <div class="w-[30vw] flex flex-col gap-5 hidden" id="result"></div>
         </div>
+
+        <!-- Search result -->
+        <div class="absolute top-10 right-10 w-[30vw] flex flex-col gap-5" id="result"></div>
+
     </section>
 
     <script src="./travel_recommendation.js"></script>
