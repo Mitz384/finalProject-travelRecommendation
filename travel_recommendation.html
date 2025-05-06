@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-sky-300 py-4 px-10 sticky top-0 z-50">
+        <ul class="flex justify-between items-center">
+            <li>
+                <h2 class="text-white font-bold text-2xl cursor-pointer" id="logo">TravelBloom</h2>
+            </li>
+            <li class="flex gap-6 text-white font-semibold text-xl items-center">
+                <p class="cursor-pointer" id="home">Home</p>
+                <p class="cursor-pointer" id="about">About us</p>
+                <p class="cursor-pointer" id="contact">Contact us</p>
+            </li>
+            <li class="bg-white px-5 py-2 rounded-full flex gap-5 items-center">
+                <input type="text" class="min-w-3xs focus:outline-none" id="inputSearch" placeholder="Enter a destination or keyword">
+                <div class="flex gap-2">
+                    <button class="btnSearch bg-sky-300 px-3 py-1 rounded-md text-white cursor-pointer" id="searchBtn">Search</button>
+                    <button class="btnClear bg-sky-300 px-3 py-1 rounded-md text-white cursor-pointer" id="clearBtn">Clear</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <section class="relative inset-0 h-[calc(100vh-80px)] z-10 bg-no-repeat bg-center bg-cover" style="background-image: url('https://www.vietnamimmigration.com/wp-content/uploads/2012/11/view-over-hanoi-vietnam.jpg')">
+        <!-- Background -->
+        <div class="absolute inset-0 bg-black/35 backdrop-blur-xs"></div>
+        <div class="relative flex justify-between p-10 h-full">
+            <!-- Home -->
+            <div class="flex items-center gap-20 h-[calc(100vh-80px-5rem)]" id="home_content">
+                <div class="flex h-full flex-col items-center justify-between">
+                    <div class="h-[30vh] w-1 bg-white rounded-full"></div>
+                    <div id="icon_lst" class="flex flex-col gap-5">
+                        <!-- X -->
+                        <a target="_blank" href="https://x.com/">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5698 40.0624H20.4818C9.4782 40.0624 0.525818 31.1074 0.525818 20.1006V20.0125C0.525818 9.00566 9.4782 0.0506592 20.4818 0.0506592H20.5698C31.5734 0.0506592 40.5258 9.00566 40.5258 20.0125V20.1006C40.5258 31.1074 31.5734 40.0624 20.5698 40.0624ZM20.4818 1.40502C10.2242 1.40502 1.87978 9.75191 1.87978 20.0125V20.1006C1.87978 30.3612 10.2242 38.7081 20.4818 38.7081H20.5698C30.8274 38.7081 39.1719 30.3612 39.1719 20.1006V20.0125C39.1719 9.75191 30.8274 1.40502 20.5698 1.40502H20.4818Z" fill="white"/>
+                                <path d="M9.04088 9.47968L17.9526 21.398L8.98536 31.0885H11.0041L18.8557 22.6048L25.199 31.0885H32.0676L22.6549 18.4997L31.0021 9.47968H28.9833L21.7532 17.293L15.9109 9.47968H9.04221H9.04088ZM12.0087 10.9668H15.1635L29.0971 29.6014H25.9423L12.0087 10.9668Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- FB -->
+                        <a target="_blank" href="https://www.facebook.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.044 40.0118H19.956C8.95238 40.0118 0 31.0568 0 20.0499V19.9619C0 8.95503 8.95238 0 19.956 0H20.044C31.0476 0 40 8.95503 40 19.9619V20.0499C40 31.0568 31.0476 40.0118 20.044 40.0118ZM19.956 1.35436C9.69841 1.35436 1.35396 9.70128 1.35396 19.9619V20.0499C1.35396 30.3105 9.69841 38.6574 19.956 38.6574H20.044C30.3016 38.6574 38.646 30.3105 38.646 20.0499V19.9619C38.646 9.70128 30.3016 1.35436 20.044 1.35436H19.956Z" fill="white"/>
+                                <path d="M22.691 15.5196V19.7303H27.8983L27.0738 25.4023H22.691V38.4705C21.8123 38.5924 20.9133 38.6561 20.0007 38.6561C18.9473 38.6561 17.9129 38.5721 16.9055 38.4096V25.4023H12.103V19.7303H16.9055V14.5783C16.9055 11.382 19.4957 8.78979 22.6924 8.78979V8.79251C22.7018 8.79251 22.71 8.78979 22.7194 8.78979H27.8997V13.6953H24.5148C23.5088 13.6953 22.6924 14.5119 22.6924 15.5182L22.691 15.5196Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- IG -->
+                        <a target="_blank" href="https://www.instagram.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.044 40.0118H19.956C8.95238 40.0118 0 31.0568 0 20.0499V19.9619C0 8.955 8.95238 0 19.956 0H20.044C31.0476 0 40 8.955 40 19.9619V20.0499C40 31.0568 31.0476 40.0118 20.044 40.0118ZM19.956 1.35436C9.69841 1.35436 1.35396 9.70125 1.35396 19.9619V20.0499C1.35396 30.3105 9.69841 38.6574 19.956 38.6574H20.044C30.3016 38.6574 38.646 30.3105 38.646 20.0499V19.9619C38.646 9.70125 30.3016 1.35436 20.044 1.35436H19.956Z" fill="white"/>
+                                <path d="M25.9797 8.54202H14.0215C10.7179 8.54202 8.03024 11.2304 8.03024 14.5351V25.4782C8.03024 28.7829 10.7179 31.4713 14.0215 31.4713H25.9797C29.2833 31.4713 31.9709 28.7829 31.9709 25.4782V14.5351C31.9709 11.2304 29.2833 8.54202 25.9797 8.54202ZM10.1438 14.5351C10.1438 12.3965 11.8836 10.6562 14.0215 10.6562H25.9797C28.1176 10.6562 29.8574 12.3965 29.8574 14.5351V25.4782C29.8574 27.6168 28.1176 29.3571 25.9797 29.3571H14.0215C11.8836 29.3571 10.1438 27.6168 10.1438 25.4782V14.5351Z" fill="white"/>
+                                <path d="M20.0007 25.5798C23.0729 25.5798 25.5736 23.0797 25.5736 20.0053C25.5736 16.9309 23.0742 14.4308 20.0007 14.4308C16.9272 14.4308 14.4278 16.9309 14.4278 20.0053C14.4278 23.0797 16.9272 25.5798 20.0007 25.5798ZM20.0007 16.5463C21.9085 16.5463 23.4601 18.0984 23.4601 20.0067C23.4601 21.915 21.9085 23.4671 20.0007 23.4671C18.093 23.4671 16.5414 21.915 16.5414 20.0067C16.5414 18.0984 18.093 16.5463 20.0007 16.5463Z" fill="white"/>
+                                <path d="M26.0894 15.3313C26.9167 15.3313 27.5909 14.6583 27.5909 13.8294C27.5909 13.0005 26.918 12.3274 26.0894 12.3274C25.2608 12.3274 24.5879 13.0005 24.5879 13.8294C24.5879 14.6583 25.2608 15.3313 26.0894 15.3313Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- YT -->
+                        <a target="_blank" href="https://www.youtube.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 40.0118C8.97157 40.0118 0 31.0376 0 20.0059C0 8.97421 8.97157 0 20 0C31.0285 0 40 8.97421 40 20.0059C40 31.0376 31.0285 40.0118 20 40.0118ZM20 1.35808C9.72101 1.35808 1.35768 9.72387 1.35768 20.0059C1.35768 30.2879 9.72101 38.6537 20 38.6537C30.279 38.6537 38.6423 30.2879 38.6423 20.0059C38.6423 9.72387 30.279 1.35808 20 1.35808Z" fill="white"/>
+                            <path d="M32.1662 16.0009C32.0141 14.5328 31.687 12.9099 30.4827 12.0571C29.55 11.3957 28.324 11.3712 27.1794 11.3726C24.7601 11.3739 22.3393 11.3767 19.9199 11.378C17.5929 11.3807 15.2658 11.3821 12.9387 11.3848C11.9666 11.3862 11.0217 11.3101 10.1188 11.7311C9.34358 12.0924 8.73669 12.7795 8.37148 13.5441C7.86506 14.6075 7.75917 15.8122 7.69807 16.9883C7.58539 19.13 7.5976 21.2771 7.73202 23.4174C7.83113 24.9792 8.08229 26.7053 9.28927 27.7008C10.3591 28.5822 11.8689 28.6257 13.2564 28.627C17.6607 28.6311 22.0664 28.6352 26.4721 28.6379C27.0369 28.6392 27.6261 28.6284 28.2018 28.5659C29.3341 28.4437 30.4134 28.1191 31.1412 27.2798C31.8757 26.4337 32.0644 25.2562 32.1757 24.1413C32.4473 21.436 32.4445 18.7049 32.1662 16.0009ZM17.3729 23.7977V16.2128L23.9387 20.0045L17.3729 23.7977Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div id="introduction" class="flex flex-col gap-20">
+                    <div class="flex flex-col gap-5">
+                        <h1 class="font-extrabold text-7xl text-white w-[35%] text-wrap">EXPLORE DREAM DESTINATION</h1>
+                        <p class="text-white text-lg w-[40vh] text-wrap">It encourages exploration of unfamiliar territories, embarcing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+                    </div>
+                    <button class="text-white text-lg bg-sky-300 px-7 py-2 rounded-lg font-semibold w-fit cursor-pointer">BOOK NOW</button>
+                </div>
+            </div>
+
+            <!-- About us -->
+            <div class="flex items-start gap-20 h-full hidden" id="about_content">
+                <div class="flex h-full flex-col items-center justify-between">
+                    <div class="h-[30vh] w-1 bg-white rounded-full"></div>
+                    <div id="icon_lst" class="flex flex-col gap-5">
+                        <!-- X -->
+                        <a target="_blank" href="https://x.com/">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5698 40.0624H20.4818C9.4782 40.0624 0.525818 31.1074 0.525818 20.1006V20.0125C0.525818 9.00566 9.4782 0.0506592 20.4818 0.0506592H20.5698C31.5734 0.0506592 40.5258 9.00566 40.5258 20.0125V20.1006C40.5258 31.1074 31.5734 40.0624 20.5698 40.0624ZM20.4818 1.40502C10.2242 1.40502 1.87978 9.75191 1.87978 20.0125V20.1006C1.87978 30.3612 10.2242 38.7081 20.4818 38.7081H20.5698C30.8274 38.7081 39.1719 30.3612 39.1719 20.1006V20.0125C39.1719 9.75191 30.8274 1.40502 20.5698 1.40502H20.4818Z" fill="white"/>
+                                <path d="M9.04088 9.47968L17.9526 21.398L8.98536 31.0885H11.0041L18.8557 22.6048L25.199 31.0885H32.0676L22.6549 18.4997L31.0021 9.47968H28.9833L21.7532 17.293L15.9109 9.47968H9.04221H9.04088ZM12.0087 10.9668H15.1635L29.0971 29.6014H25.9423L12.0087 10.9668Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- FB -->
+                        <a target="_blank" href="https://www.facebook.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.044 40.0118H19.956C8.95238 40.0118 0 31.0568 0 20.0499V19.9619C0 8.95503 8.95238 0 19.956 0H20.044C31.0476 0 40 8.95503 40 19.9619V20.0499C40 31.0568 31.0476 40.0118 20.044 40.0118ZM19.956 1.35436C9.69841 1.35436 1.35396 9.70128 1.35396 19.9619V20.0499C1.35396 30.3105 9.69841 38.6574 19.956 38.6574H20.044C30.3016 38.6574 38.646 30.3105 38.646 20.0499V19.9619C38.646 9.70128 30.3016 1.35436 20.044 1.35436H19.956Z" fill="white"/>
+                                <path d="M22.691 15.5196V19.7303H27.8983L27.0738 25.4023H22.691V38.4705C21.8123 38.5924 20.9133 38.6561 20.0007 38.6561C18.9473 38.6561 17.9129 38.5721 16.9055 38.4096V25.4023H12.103V19.7303H16.9055V14.5783C16.9055 11.382 19.4957 8.78979 22.6924 8.78979V8.79251C22.7018 8.79251 22.71 8.78979 22.7194 8.78979H27.8997V13.6953H24.5148C23.5088 13.6953 22.6924 14.5119 22.6924 15.5182L22.691 15.5196Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- IG -->
+                        <a target="_blank" href="https://www.instagram.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.044 40.0118H19.956C8.95238 40.0118 0 31.0568 0 20.0499V19.9619C0 8.955 8.95238 0 19.956 0H20.044C31.0476 0 40 8.955 40 19.9619V20.0499C40 31.0568 31.0476 40.0118 20.044 40.0118ZM19.956 1.35436C9.69841 1.35436 1.35396 9.70125 1.35396 19.9619V20.0499C1.35396 30.3105 9.69841 38.6574 19.956 38.6574H20.044C30.3016 38.6574 38.646 30.3105 38.646 20.0499V19.9619C38.646 9.70125 30.3016 1.35436 20.044 1.35436H19.956Z" fill="white"/>
+                                <path d="M25.9797 8.54202H14.0215C10.7179 8.54202 8.03024 11.2304 8.03024 14.5351V25.4782C8.03024 28.7829 10.7179 31.4713 14.0215 31.4713H25.9797C29.2833 31.4713 31.9709 28.7829 31.9709 25.4782V14.5351C31.9709 11.2304 29.2833 8.54202 25.9797 8.54202ZM10.1438 14.5351C10.1438 12.3965 11.8836 10.6562 14.0215 10.6562H25.9797C28.1176 10.6562 29.8574 12.3965 29.8574 14.5351V25.4782C29.8574 27.6168 28.1176 29.3571 25.9797 29.3571H14.0215C11.8836 29.3571 10.1438 27.6168 10.1438 25.4782V14.5351Z" fill="white"/>
+                                <path d="M20.0007 25.5798C23.0729 25.5798 25.5736 23.0797 25.5736 20.0053C25.5736 16.9309 23.0742 14.4308 20.0007 14.4308C16.9272 14.4308 14.4278 16.9309 14.4278 20.0053C14.4278 23.0797 16.9272 25.5798 20.0007 25.5798ZM20.0007 16.5463C21.9085 16.5463 23.4601 18.0984 23.4601 20.0067C23.4601 21.915 21.9085 23.4671 20.0007 23.4671C18.093 23.4671 16.5414 21.915 16.5414 20.0067C16.5414 18.0984 18.093 16.5463 20.0007 16.5463Z" fill="white"/>
+                                <path d="M26.0894 15.3313C26.9167 15.3313 27.5909 14.6583 27.5909 13.8294C27.5909 13.0005 26.918 12.3274 26.0894 12.3274C25.2608 12.3274 24.5879 13.0005 24.5879 13.8294C24.5879 14.6583 25.2608 15.3313 26.0894 15.3313Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- YT -->
+                        <a target="_blank" href="https://www.youtube.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 40.0118C8.97157 40.0118 0 31.0376 0 20.0059C0 8.97421 8.97157 0 20 0C31.0285 0 40 8.97421 40 20.0059C40 31.0376 31.0285 40.0118 20 40.0118ZM20 1.35808C9.72101 1.35808 1.35768 9.72387 1.35768 20.0059C1.35768 30.2879 9.72101 38.6537 20 38.6537C30.279 38.6537 38.6423 30.2879 38.6423 20.0059C38.6423 9.72387 30.279 1.35808 20 1.35808Z" fill="white"/>
+                            <path d="M32.1662 16.0009C32.0141 14.5328 31.687 12.9099 30.4827 12.0571C29.55 11.3957 28.324 11.3712 27.1794 11.3726C24.7601 11.3739 22.3393 11.3767 19.9199 11.378C17.5929 11.3807 15.2658 11.3821 12.9387 11.3848C11.9666 11.3862 11.0217 11.3101 10.1188 11.7311C9.34358 12.0924 8.73669 12.7795 8.37148 13.5441C7.86506 14.6075 7.75917 15.8122 7.69807 16.9883C7.58539 19.13 7.5976 21.2771 7.73202 23.4174C7.83113 24.9792 8.08229 26.7053 9.28927 27.7008C10.3591 28.5822 11.8689 28.6257 13.2564 28.627C17.6607 28.6311 22.0664 28.6352 26.4721 28.6379C27.0369 28.6392 27.6261 28.6284 28.2018 28.5659C29.3341 28.4437 30.4134 28.1191 31.1412 27.2798C31.8757 26.4337 32.0644 25.2562 32.1757 24.1413C32.4473 21.436 32.4445 18.7049 32.1662 16.0009ZM17.3729 23.7977V16.2128L23.9387 20.0045L17.3729 23.7977Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-25 w-[85%]">
+                    <h1 class="font-extrabold text-7xl text-white">ABOUT US</h1>
+                    <div class="flex flex-col gap-15">
+                        <p class="text-white text-lg text-wrap py-2 px-5 bg-black/50 w-[83%] rounded-lg">Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to <strong>provide the best experience</strong> for people traveling to different destinations around the world.<br>Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in <strong>putting our customers first</strong> and <strong>working together</strong> to achieve our goals.<br>Feel free to explore our website to learn more about what we offer!</p>
+                        
+                        <div class="flex gap-15">
+                            <h2 class="font-extrabold text-6xl text-white text-wrap w-3xs">Our Team</h2>
+                            <div class="flex gap-10">
+                                <div class="flex gap-4 bg-black/50 py-10 px-8 rounded-xl">
+                                    <div class="bg-sky-300 h-fit p-2 rounded-md">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_3300_2)">
+                                            <path d="M12 12C15.077 12 17.5714 9.50556 17.5714 6.42855C17.5714 3.35153 15.077 0.857117 12 0.857117C8.92299 0.857117 6.42857 3.35153 6.42857 6.42855C6.42857 9.50556 8.92299 12 12 12Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22.5943 23.1428C21.8746 20.8986 20.4608 18.9409 18.5568 17.5519C16.6527 16.163 14.3568 15.4146 12 15.4146C9.64319 15.4146 7.34727 16.163 5.44323 17.5519C3.53919 18.9409 2.12541 20.8986 1.40572 23.1428H22.5943Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3300_2">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-white text-lg font-semibold">John Doe</p>
+                                        <p class="text-white text-lg">John is responsible for...</p>
+                                        <p class="text-white text-lg text-center font-semibold mt-2 py-1 bg-sky-300 rounded-md">CEO</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 bg-black/50 py-10 px-8 rounded-xl">
+                                    <div class="bg-sky-300 h-fit p-2 rounded-md">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_3300_2)">
+                                            <path d="M12 12C15.077 12 17.5714 9.50556 17.5714 6.42855C17.5714 3.35153 15.077 0.857117 12 0.857117C8.92299 0.857117 6.42857 3.35153 6.42857 6.42855C6.42857 9.50556 8.92299 12 12 12Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22.5943 23.1428C21.8746 20.8986 20.4608 18.9409 18.5568 17.5519C16.6527 16.163 14.3568 15.4146 12 15.4146C9.64319 15.4146 7.34727 16.163 5.44323 17.5519C3.53919 18.9409 2.12541 20.8986 1.40572 23.1428H22.5943Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3300_2">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-white text-lg font-semibold">Celina Thomas</p>
+                                        <p class="text-white text-lg">Celina Thomas is responsible for...</p>
+                                        <p class="text-white text-lg text-center font-semibold mt-2 py-1 bg-sky-300 rounded-md">Team lead</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 bg-black/50 py-10 px-8 rounded-xl">
+                                    <div class="bg-sky-300 h-fit p-2 rounded-md">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_3300_2)">
+                                            <path d="M12 12C15.077 12 17.5714 9.50556 17.5714 6.42855C17.5714 3.35153 15.077 0.857117 12 0.857117C8.92299 0.857117 6.42857 3.35153 6.42857 6.42855C6.42857 9.50556 8.92299 12 12 12Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22.5943 23.1428C21.8746 20.8986 20.4608 18.9409 18.5568 17.5519C16.6527 16.163 14.3568 15.4146 12 15.4146C9.64319 15.4146 7.34727 16.163 5.44323 17.5519C3.53919 18.9409 2.12541 20.8986 1.40572 23.1428H22.5943Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_3300_2">
+                                            <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="mt-2">
+                                        <p class="text-white text-lg font-semibold">Mike Tysen</p>
+                                        <p class="text-white text-lg">Mike Tysen is responsible for...</p>
+                                        <p class="text-white text-lg text-center font-semibold mt-2 py-1 bg-sky-300 rounded-md">Delivery Head</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact us -->
+            <div class="flex items-center gap-20 h-full hidden" id="contact_content">
+                <div class="flex h-full flex-col items-center justify-between">
+                    <div class="h-[30vh] w-1 bg-white rounded-full"></div>
+                    <div id="icon_lst" class="flex flex-col gap-5">
+                        <!-- X -->
+                        <a target="_blank" href="https://x.com/">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5698 40.0624H20.4818C9.4782 40.0624 0.525818 31.1074 0.525818 20.1006V20.0125C0.525818 9.00566 9.4782 0.0506592 20.4818 0.0506592H20.5698C31.5734 0.0506592 40.5258 9.00566 40.5258 20.0125V20.1006C40.5258 31.1074 31.5734 40.0624 20.5698 40.0624ZM20.4818 1.40502C10.2242 1.40502 1.87978 9.75191 1.87978 20.0125V20.1006C1.87978 30.3612 10.2242 38.7081 20.4818 38.7081H20.5698C30.8274 38.7081 39.1719 30.3612 39.1719 20.1006V20.0125C39.1719 9.75191 30.8274 1.40502 20.5698 1.40502H20.4818Z" fill="white"/>
+                                <path d="M9.04088 9.47968L17.9526 21.398L8.98536 31.0885H11.0041L18.8557 22.6048L25.199 31.0885H32.0676L22.6549 18.4997L31.0021 9.47968H28.9833L21.7532 17.293L15.9109 9.47968H9.04221H9.04088ZM12.0087 10.9668H15.1635L29.0971 29.6014H25.9423L12.0087 10.9668Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- FB -->
+                        <a target="_blank" href="https://www.facebook.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.044 40.0118H19.956C8.95238 40.0118 0 31.0568 0 20.0499V19.9619C0 8.95503 8.95238 0 19.956 0H20.044C31.0476 0 40 8.95503 40 19.9619V20.0499C40 31.0568 31.0476 40.0118 20.044 40.0118ZM19.956 1.35436C9.69841 1.35436 1.35396 9.70128 1.35396 19.9619V20.0499C1.35396 30.3105 9.69841 38.6574 19.956 38.6574H20.044C30.3016 38.6574 38.646 30.3105 38.646 20.0499V19.9619C38.646 9.70128 30.3016 1.35436 20.044 1.35436H19.956Z" fill="white"/>
+                                <path d="M22.691 15.5196V19.7303H27.8983L27.0738 25.4023H22.691V38.4705C21.8123 38.5924 20.9133 38.6561 20.0007 38.6561C18.9473 38.6561 17.9129 38.5721 16.9055 38.4096V25.4023H12.103V19.7303H16.9055V14.5783C16.9055 11.382 19.4957 8.78979 22.6924 8.78979V8.79251C22.7018 8.79251 22.71 8.78979 22.7194 8.78979H27.8997V13.6953H24.5148C23.5088 13.6953 22.6924 14.5119 22.6924 15.5182L22.691 15.5196Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- IG -->
+                        <a target="_blank" href="https://www.instagram.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.044 40.0118H19.956C8.95238 40.0118 0 31.0568 0 20.0499V19.9619C0 8.955 8.95238 0 19.956 0H20.044C31.0476 0 40 8.955 40 19.9619V20.0499C40 31.0568 31.0476 40.0118 20.044 40.0118ZM19.956 1.35436C9.69841 1.35436 1.35396 9.70125 1.35396 19.9619V20.0499C1.35396 30.3105 9.69841 38.6574 19.956 38.6574H20.044C30.3016 38.6574 38.646 30.3105 38.646 20.0499V19.9619C38.646 9.70125 30.3016 1.35436 20.044 1.35436H19.956Z" fill="white"/>
+                                <path d="M25.9797 8.54202H14.0215C10.7179 8.54202 8.03024 11.2304 8.03024 14.5351V25.4782C8.03024 28.7829 10.7179 31.4713 14.0215 31.4713H25.9797C29.2833 31.4713 31.9709 28.7829 31.9709 25.4782V14.5351C31.9709 11.2304 29.2833 8.54202 25.9797 8.54202ZM10.1438 14.5351C10.1438 12.3965 11.8836 10.6562 14.0215 10.6562H25.9797C28.1176 10.6562 29.8574 12.3965 29.8574 14.5351V25.4782C29.8574 27.6168 28.1176 29.3571 25.9797 29.3571H14.0215C11.8836 29.3571 10.1438 27.6168 10.1438 25.4782V14.5351Z" fill="white"/>
+                                <path d="M20.0007 25.5798C23.0729 25.5798 25.5736 23.0797 25.5736 20.0053C25.5736 16.9309 23.0742 14.4308 20.0007 14.4308C16.9272 14.4308 14.4278 16.9309 14.4278 20.0053C14.4278 23.0797 16.9272 25.5798 20.0007 25.5798ZM20.0007 16.5463C21.9085 16.5463 23.4601 18.0984 23.4601 20.0067C23.4601 21.915 21.9085 23.4671 20.0007 23.4671C18.093 23.4671 16.5414 21.915 16.5414 20.0067C16.5414 18.0984 18.093 16.5463 20.0007 16.5463Z" fill="white"/>
+                                <path d="M26.0894 15.3313C26.9167 15.3313 27.5909 14.6583 27.5909 13.8294C27.5909 13.0005 26.918 12.3274 26.0894 12.3274C25.2608 12.3274 24.5879 13.0005 24.5879 13.8294C24.5879 14.6583 25.2608 15.3313 26.0894 15.3313Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <!-- YT -->
+                        <a target="_blank" href="https://www.youtube.com/">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 40.0118C8.97157 40.0118 0 31.0376 0 20.0059C0 8.97421 8.97157 0 20 0C31.0285 0 40 8.97421 40 20.0059C40 31.0376 31.0285 40.0118 20 40.0118ZM20 1.35808C9.72101 1.35808 1.35768 9.72387 1.35768 20.0059C1.35768 30.2879 9.72101 38.6537 20 38.6537C30.279 38.6537 38.6423 30.2879 38.6423 20.0059C38.6423 9.72387 30.279 1.35808 20 1.35808Z" fill="white"/>
+                            <path d="M32.1662 16.0009C32.0141 14.5328 31.687 12.9099 30.4827 12.0571C29.55 11.3957 28.324 11.3712 27.1794 11.3726C24.7601 11.3739 22.3393 11.3767 19.9199 11.378C17.5929 11.3807 15.2658 11.3821 12.9387 11.3848C11.9666 11.3862 11.0217 11.3101 10.1188 11.7311C9.34358 12.0924 8.73669 12.7795 8.37148 13.5441C7.86506 14.6075 7.75917 15.8122 7.69807 16.9883C7.58539 19.13 7.5976 21.2771 7.73202 23.4174C7.83113 24.9792 8.08229 26.7053 9.28927 27.7008C10.3591 28.5822 11.8689 28.6257 13.2564 28.627C17.6607 28.6311 22.0664 28.6352 26.4721 28.6379C27.0369 28.6392 27.6261 28.6284 28.2018 28.5659C29.3341 28.4437 30.4134 28.1191 31.1412 27.2798C31.8757 26.4337 32.0644 25.2562 32.1757 24.1413C32.4473 21.436 32.4445 18.7049 32.1662 16.0009ZM17.3729 23.7977V16.2128L23.9387 20.0045L17.3729 23.7977Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-30">
+                    <div class="flex flex-col gap-15">
+                        <h1 class="font-extrabold text-7xl text-white">CONTACT US</h1>
+                        <p class="text-white text-2xl">Get in touch</p>
+                    </div>
+                    <div class="flex flex-col gap-6 w-[45vw]">
+                        <div class="flex flex-col gap-3 w-full">
+                            <label for="name" class="text-white text-lg">Name</label>
+                            <input class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50" id="name" name="name" type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="flex flex-col gap-3 w-full">
+                            <label for="email" class="text-white text-lg">Email</label>
+                            <input class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50" id="email" name="email" type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="flex flex-col gap-3 w-full">
+                            <label for="message" class="text-white text-lg">Message</label>
+                            <textarea class="border border-gray-300 py-2 px-4 rounded-lg placeholder:text-white/50" id="message" name="message" type="text" rows="10" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button class="bg-sky-300 py-2 text-white text-xl font-semibold rounded-lg" type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search result -->
+            <div class="w-[30vw] flex flex-col gap-5 hidden" id="result"></div>
+        </div>
+    </section>
+
+    <script src="./travel_recommendation.js"></script>
+</body>
+</html>

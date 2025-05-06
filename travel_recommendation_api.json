@@ -1,0 +1,82 @@
+{
+    "countries": [
+        {
+            "id": 1,
+            "name": "Australia",
+            "cities": [
+            {
+                "name": "Sydney, Australia",
+                "imageUrl": "https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c807852d783eedf964fccfab78dc8b910257b97c9001c6a1812d70ef6e8b60b66a7409383b5c2a68cbec693672315040a9455f/sydney-2647.jpg.webp",
+                "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+            },
+            {
+                "name": "Melbourne, Australia",
+                "imageUrl": "https://worldtrip.vn/view/admin/Themes/kcfinder/upload/images/tintuc/Melbourne-thanh-pho-du-lich-dang-song-nhat.jpg",
+                "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+            }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Japan",
+            "cities": [
+            {
+                "name": "Tokyo, Japan",
+                "imageUrl": "https://media.cntraveler.com/photos/678166b8a51cc7c3458df25a/16:9/w_5920,h_3330,c_limit/pexels-Aleksandar%20Pasaric-2506923.jpg",
+                "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+            },
+            {
+                "name": "Kyoto, Japan",
+                "imageUrl": "https://duhoc.thanhgiang.com.vn/sites/default/files/kyoto-nhat-ban-2-min.jpg",
+                "description": "Known for its historic temples, gardens, and traditional tea houses."
+            }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Brazil",
+            "cities": [
+            {
+                "name": "Rio de Janeiro, Brazil",
+                "imageUrl": "https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c807854adc86d4e86f38f883fd0a75765b357d5d9446a30888c0234e8c632fb56f3d0bb5d28a9522d2e471f1fab29ff10755f146d40851e76af414dd2c66df8c90affd/RiodeJaneiroanamazingpartinbrazil.jpg",
+                "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+            },
+            {
+                "name": "São Paulo, Brazil",
+                "imageUrl": "https://dulichvietnam.com.vn/kinh-nghiem/wp-content/uploads/2020/02/kinh-nghiem-du-lich-brazil-1.jpg",
+                "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+            }
+            ]
+        }
+    ],
+
+    "temples": [
+        {
+            "id": 1,
+            "name": "Angkor Wat, Cambodia",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/20171126_Angkor_Wat_4712_DxO.jpg",
+            "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+        },
+        {
+            "id": 2,
+            "name": "Taj Mahal, India",
+            "imageUrl": "https://static.wixstatic.com/media/055605_65e20a7fcbc54e2e8720adfc2544c35e~mv2.jpg/v1/fill/w_572,h_324,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/taj_new_contant_edited.jpg",
+            "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+        }
+    ],
+    
+    "beaches": [
+        {
+            "id": 1,
+            "name": "Bora Bora, French Polynesia",
+            "imageUrl": "https://cdn.britannica.com/16/60016-050-5D8447C8/peaks-Bora-Bora-Society-Islands-lagoon-French-Polynesia.jpg",
+            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+        },
+        {
+            "id": 2,
+            "name": "Copacabana Beach, Brazil",
+            "imageUrl": "https://voyeglobal.com/wp-content/uploads/2025/02/thumbnail-23.jpg",
+            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+        }
+    ]
+}
