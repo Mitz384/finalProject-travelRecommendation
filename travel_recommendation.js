@@ -198,7 +198,7 @@ function search(){
         
                         // Optionally, adjust the section height dynamically
                         section.style.setProperty("height", `${0.25*10*16*2 + res_height}px`); // Add padding if needed
-                    }, 100); 
+                    }, 500); 
                 });
             }
         })
